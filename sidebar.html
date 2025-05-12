@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Balas Ucapan</title>
+  <style>
+    body { font-family: sans-serif; padding: 30px; }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      background: #54382d;
+      color: white;
+      padding: 12px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Balas Ucapan</h2>
+  <form id="adminReplyForm">
+    <label for="thread">Thread ID</label>
+    <input type="number" id="thread" name="thread" required />
+
+    <label for="reply">Balasan</label>
+    <textarea id="reply" name="reply" rows="4" required></textarea>
+
+    <button type="submit">Kirim Balasan</button>
+  </form>
+
+  <script>
+    const endpoint = "https://script.google.com/macros/s/AKfycbzJ4GIWbHa8PfbZPAa5pNlqVTRpcEA3Pzd7BSCz86FIzENiBBi6JT38xSFRzbmUuOzkng/exec"; // Ganti dengan GAS URL kamu
+
+    document.getElementById("adminReplyForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const threadId = document.getElementById("thread").value.trim();
+      const reply = document.getElementById("reply").value.trim();
+
+      if (!threadId || !reply) {
+        alert("Semua field wajib diisi.");
+        return;
+      }
+
+      const formData = new URLSearchParams();
+      formData.append("userId", "admin");
+      formData.append("nama", "Admin");
+      formData.append("ucapan", reply);
+      formData.append("thread", threadId);
+      formData.append("is_ucapan", ""); // kosongkan karena admin
+
+      fetch(endpoint, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: formData.toString()
+      }).then(() => {
+        alert("Balasan berhasil dikirim!");
+        document.getElementById("adminReplyForm").reset();
+      }).catch(err => {
+        console.error("Gagal kirim balasan:", err);
+        alert("Terjadi kesalahan saat mengirim.");
+      });
+    });
+  </script>
+</body>
+</html>

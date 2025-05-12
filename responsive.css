@@ -1,0 +1,420 @@
+/* ========== Responsive Styles for Mobile ========== */
+@media screen and (max-width: 768px) {
+  
+  .photo-group .overlay-photo {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+  }
+
+  .couple-block,
+  .couple-block.reverse {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-group {
+    position: relative;
+    width: 90%; /* biar fleksibel & konsisten */
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .photo-group .main-photo,
+.photo-group .overlay-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+  .photo-group.kiri .overlay-photo,
+  .photo-group.kanan .overlay-photo {
+    position: static;
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .couple-desc {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .carousel-track img,
+  .gallery-static img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gallery-title-container {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .splash h1 {
+    font-size: 3em;
+  }
+
+  .thanks-container {
+    padding: 2em 1em;
+  }
+
+  .weddingdate-title {
+    font-size: 1.5em;
+  }
+
+  #countdown-section .overlay h1 {
+    font-size: 2.5em;
+  }
+
+  .form-doa {
+    padding: 1em;
+  }
+
+  .form-doa input,
+  .form-doa textarea {
+    font-size: 0.9em;
+  }
+
+  .form-doa button {
+    font-size: 0.9em;
+    padding: 0.6em 1.8em;
+  }
+  
+  .reveal-container {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
+  margin: auto;
+  overflow: hidden;
+}
+
+.foto-belakang,
+.foto-depan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reveal-wrapper {
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+}
+
+.slider {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #ccc;
+  outline: none;
+  cursor: pointer;
+}
+
+.bubble {
+    font-size: 0.95em;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+  }
+
+  .like-btn {
+    font-size: 0.85em;
+  }
+
+  .form-reply-thread textarea,
+  .form-reply-thread button {
+    font-size: 0.9em;
+  }
+
+  .parallax-bg {
+    background-attachment: scroll !important;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+   #countdown-section h1, .judul-wedding {
+    font-size: 1.5em;
+  }
+  .form-doa, #formReservasi {
+    padding: 1.5em;
+  }
+  
+  .splash h1 {
+    font-size: 2rem;
+  }
+  .splash p {
+    font-size: 1rem;
+  }
+  #weddingNames {
+    font-size: 2.8rem;
+  }
+  #countdown {
+    font-size: 1.2rem;
+  }
+  .unduhmantu-title-main {
+    font-size: 2.8rem;
+  }
+  .unduhmantu-title-sub {
+    font-size: 2rem;
+  }
+  .map-link {
+    font-size: 1rem;
+  }
+  
+  .couple-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .couple-block {
+    width: 100%;
+  }
+  .reveal-container {
+    width: 100%;
+  }
+  
+  .penutup-salam {
+    font-size: 1.4em;
+  }
+  .pantun-container {
+    font-size: 1.2em;
+  }
+  .penutup-invite {
+    font-size: 1.1em;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .judul-wedding, .nama-pasangan, .tanggal-acara,
+  .doa-title, .gift-title, .thanks-title {
+    font-size: 1.6em;
+  }
+
+  .thanks-container {
+    padding: 2em 1em;
+  }
+
+  .form-doa {
+    padding: 1.2em;
+  }
+
+  .form-doa input,
+  .form-doa textarea {
+    font-size: 0.95em;
+  }
+
+  .splash button {
+    padding: 0.5em 1em;
+    font-size: 0.85em;
+  }
+  
+  #userIdDisplay {
+    font-size: 0.75em;
+    text-align: center;
+  }
+  
+  .btn-balas-admin {
+  background: #e0e0e0;
+  border: none;
+  padding: 0.4em 1em;
+  margin-top: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
+}
+
+.btn-balas-admin:hover {
+  background: #ccc;
+}
+
+  .btn-balas-admin {
+    font-size: 0.8em;
+    padding: 0.3em 0.8em;
+  }
+
+  .reply-form textarea {
+    font-size: 0.9em;
+  }
+
+  .reply-form button {
+    font-size: 0.85em;
+    padding: 0.4em 1em;
+  }
+  
+  .ucapan-thread {
+    padding: 1em 0.8em;
+  }
+
+  .bubble {
+    font-size: 0.95em;
+    padding: 0.7em 1em;
+  }
+
+  .form-reply-thread textarea {
+    font-size: 0.95em;
+  }
+
+  .form-reply-thread button {
+    font-size: 0.9em;
+  }
+  
+  .scratch-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .unduhmantu-title-main {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+  
+  .unduhmantu-title-sub {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Splash screen */
+  .splash h1 {
+    font-size: 1.5rem;
+  }
+  .splash p {
+    font-size: 0.95rem;
+    margin: 10px 0;
+  }
+  .splash button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  /* Countdown Section */
+  #countdown-section h2 {
+    font-size: 1.2rem;
+  }
+  #weddingNames {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  #countdown {
+    font-size: 1rem;
+  }
+
+  /* Ayat Section */
+  .ayat-section h2 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  .latin, .translation {
+    font-size: 0.95rem;
+  }
+
+  /* Unduh Mantu / Tasyakuran Section */
+  #unduhmantu-section {
+    padding: 50px 15px;
+  }
+  .unduhmantu-title-main {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+  .unduhmantu-title-sub {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+  }
+  #unduhmantu-section p, #unduhmantu-section a {
+    font-size: 0.9rem;
+  }
+
+  /* Penutup Section */
+  .penutup-section {
+    padding: 50px 20px 80px;
+  }
+  .penutup-overlay {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .penutup-salam {
+    font-size: 1.2rem;
+  }
+  .pantun-container {
+    font-size: 0.9rem;
+  }
+  .penutup-invite {
+    font-size: 0.85rem;
+  }
+
+  /* Map link */
+  .map-link {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  .map-link img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .info-icon-wrapper {
+    width: 24px;
+    height: 24px;
+    right: 12px;
+  }
+  
+  .info-icon-wrapper-doa {
+    .info-icon-wrapper-doa {
+    width: 24px;
+    height: 24px;
+    right: 12px;
+  }
+
+  
+}
+
+@media (max-width: 600px) {
+  #formReservasi {
+    padding: 2em 1.2em;
+  }
+  
+  .ayat-section h2 {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+
+  .ayat-section .latin {
+    font-size: 0.9rem;
+  }
+
+  .ayat-section .translation {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .ayat-section .parallax-content {
+    padding: 30px 20px;
+    border-radius: 10px;
+  }
+}
+

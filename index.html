@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devi & Sandro - Wedding Invitation</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="style-protect.css">
+  <script defer src="protect.js"></script>
+
+  <script defer src="script.js"></script>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+
+  
+
+
+  
+  <style>
+  
+  
+	
+  </style>
+</head>
+<body>
+
+
+
+
+<div id="toastNotification" class="toast-notification"></div>
+
+<div id="splash" class="splash">
+  <div class="splash-overlay"></div> <!-- ✅ Tambahan untuk overlay gelap -->
+
+  <h1 class="splash-title">Devi & Sandro</h1>
+  <p class="splash-subtitle handwrite-effect">Special Invitation to</p>
+  <p class="splash-desc">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami</p>
+  
+  <button class="splash-button" onclick="openInvitation()">🎉 Open Invitation</button>
+</div>
+
+<div id="mainContent" class="main-content">
+
+<section class="parallax-wrapper" id="countdown-section">
+<div class="countdown-overlay"></div> 
+    <div class="parallax-content scroll-reveal">
+    <h2 class="judul-wedding">The Wedding of</h2>
+    <h1 id="weddingNames" class="letter-drop">Devi & Sandro</h1>
+    <h3>Rustic Elegance Morning</h3>
+    <p class="tanggal-acara">Jumat, 13 Juni 2025</p>
+    <div id="countdown" style="margin-top: 20px; font-size: 1.2em;"></div>
+  </div>
+</section>
+
+<div id="ucapanTutupOverlay" class="ucapan-tutup-overlay" style="display: none;" role="dialog" aria-modal="true">
+  <img src="https://undangan-bdg.vercel.app/Asset/closed.png" alt="Acara Telah Selesai">
+  <div class="ucapan-tutup-box">
+    <h2>⏳ Ucapan Telah Ditutup</h2>
+    <p>Terima kasih atas doa dan ucapannya 💌</p>
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#d8f3dc" fill-opacity="1" d="M0,160L80,133.3C160,107,320,53,480,74.7C640,96,800,192,960,229.3C1120,267,1280,245,1360,234.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+
+
+
+
+
+
+
+
+
+<section id="ayat-section" class="ayat-deluxe">
+  <div class="ayat-overlay"></div>
+
+  <div class="ayat-container scroll-reveal shimmer-slow"> <!-- ✅ tambah shimmer-slow -->
+    <h2 class="ayat-arabic">
+      بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+    </h2>
+    <p class="ayat-latin">
+      Bārakallāhu laka, wa bāraka ‘alaika, wa jama‘a bainakumā fī khair.
+    </p>
+    <p class="ayat-terjemahan">
+      Semoga Allah memberkahimu, memberkahi atasmu, dan mempersatukan kalian berdua dalam kebaikan.<br>
+      <em>(HR. Abu Dawud, At-Tirmidzi)</em>
+    </p>
+  </div>
+</section>
+
+
+
+
+
+<section id="couple-section" class="scroll-reveal">
+  <div class="couple-container">
+  
+    <!-- Mempelai Wanita -->
+    <div class="couple-block">
+      <div class="reveal-container gradient-bg">
+        <img src="https://i.imgur.com/1nnw0Hk.jpeg" class="foto-belakang zoomable" />
+        <div class="reveal-wrapper">
+          <img src="https://i.imgur.com/gvXAGTq.jpeg" class="foto-depan" />
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider" />
+      </div>
+      <div class="couple-desc fade-in-up">
+        <h3 class="role">Mempelai Wanita</h3>
+        <h2 class="name heartbeat">Devi Desviani</h2>
+        <p>Putri dari pasangan Bapak Bambang Pratioto & Ibu Linna Nurliana</p>
+        <div class="social">
+          <a href="https://instagram.com/devidesviani" target="_blank">
+            <i class="fab fa-instagram"></i> @devidesviani
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mempelai Pria -->
+    <div class="couple-block reverse">
+      <div class="reveal-container gradient-bg">
+        <img src="https://i.imgur.com/IEj2ZPl.jpeg" class="foto-belakang zoomable" />
+        <div class="reveal-wrapper">
+          <img src="https://i.imgur.com/lpEuk7w.jpeg" class="foto-depan" />
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider" />
+      </div>
+      <div class="couple-desc fade-in-up">
+        <h3 class="role">Mempelai Pria</h3>
+        <h2 class="name heartbeat">Sandro Dwicahyo</h2>
+        <p>Putra dari pasangan Bapak Agus Mediarto Mulya & Ibu Nuryati</p>
+        <div class="social">
+          <a href="https://instagram.com/sandro.dwicahyo" target="_blank">
+            <i class="fab fa-instagram"></i> @sandro.dwicahyo
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="weddingdate-section">
+	<h2 class="weddingdate-title">
+        <span class="weddingdate-title-main">Wedding</span>
+        <span class="weddingdate-title-sub">Date</span>
+      </h2>
+</section>
+
+
+
+<section id="unduhmantu-section">
+  <h2 class="unduhmantu-title">
+    <span class="unduhmantu-title-main">Tasyakuran</span>
+    <span class="unduhmantu-title-sub">Pernikahan</span>
+  </h2>
+
+  <p>Jumat, 13 Juni 2025<br>Akad: 07.00 WIB | Resepsi: 10.00 WIB</p>
+  <p>Paragraph Coffee and Eatery</p>
+  <p>Jl. Nanas No.13, Cihapit, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40114</p>
+
+  <a href="https://maps.app.goo.gl/fHxLopzy8KhSEneRA" target="_blank" class="map-link">
+    <img src="https://undangan-bdg.vercel.app/Asset/map.png" alt="Lokasi" width="24" height="24" style="vertical-align: middle; margin-right: 8px;">
+    Google Maps
+  </a>
+
+  <p style="margin-top: 1.5em; font-weight: bold;">Dresscode:</p>
+  <p>Putih / Sage Green / Beige</p>
+</section>
+
+  
+  
+
+
+<section id="gallery-section">
+  <div class="gallery-wrapper">
+    <div class="gallery-title-container">
+      <h2 class="gallery-title">
+        <span class="title-main">Gallery</span>
+        <span class="title-sub">Photo</span>
+      </h2>
+    </div>
+
+    <div class="gallery-carousel" id="galleryCarousel">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="https://undangan-bdg.vercel.app/Asset/devi1.jpg" alt="Photo 1">
+        <img src="https://undangan-bdg.vercel.app/Asset/san1.jpg" alt="Photo 2">
+        <img src="https://undangan-bdg.vercel.app/Asset/cou1.jpg" alt="Photo 3">
+        <img src="https://undangan-bdg.vercel.app/Asset/devi2.jpg" alt="Photo 4">
+		<img src="https://undangan-bdg.vercel.app/Asset/san2.jpg" alt="Photo 5">
+        <img src="https://undangan-bdg.vercel.app/Asset/cou2.jpg" alt="Photo 6">
+        <img src="https://undangan-bdg.vercel.app/Asset/devi3.jpg" alt="Photo 7">
+        <img src="https://undangan-bdg.vercel.app/Asset/san3.jpg" alt="Photo 8">
+		<img src="https://undangan-bdg.vercel.app/Asset/cou3.jpg" alt="Photo 9">
+        <img src="https://undangan-bdg.vercel.app/Asset/devi4.jpg" alt="Photo 10">
+        <img src="https://undangan-bdg.vercel.app/Asset/san4.jpg" alt="Photo 11">
+        <img src="https://undangan-bdg.vercel.app/Asset/cou4.jpg" alt="Photo 12">
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<section id="gift-section">
+  <h2 class="gift-title">
+    <span class="gift-title-main">Wedding</span>
+    <span class="gift-title-sub">Gift</span>
+  </h2>
+
+  <p class="gift-intro">
+    Kehadiranmu adalah hadiah terindah.<br>
+    Jika berkenan berbagi kebahagiaan dari jauh, berikut opsinya:
+  </p>
+
+  <div class="gift-card scroll-reveal">
+    <a href="https://saweria.co/CZhappy" target="_blank" class="btn-saweria">
+      💝 Kirim Hadiah via Saweria
+    </a>
+  </div>
+</section>
+
+
+
+<div class="rsvp-heading">
+  <div class="rsvp-heading-wrapper">
+    <h2>RSVP</h2>
+    <div class="info-icon-wrapper" onclick="openBottomSheetGeneric('bottomSheet')" title="Klik untuk info lebih lanjut!">
+      <img src="https://undangan-bdg.vercel.app/Asset/information.png" alt="Info" class="info-icon" />
+    <div class="tooltip-text-doa">
+      📢 Klik aku untuk informasi lebih lengkap!
+    </div>
+	</div>
+	
+		
+  </div>
+  <p class="handwrite-effect">
+    Yuk, isi kehadiran kamu di bawah ini.
+  </p>
+</div>
+
+<form id="formReservasi" class="form-doa">
+  <input type="text" id="namaReservasi" placeholder="Tulis Nama Anda" required />
+  
+  <select id="statusReservasi" required>
+    <option value="" disabled selected>Konfirmasi Kehadiran Anda</option>
+    <option value="datang">Datang</option>
+    <option value="tidak">Tidak Datang</option>
+    <option value="ragu-ragu">Masih Ragu</option>
+  </select>
+  
+  <button type="submit" class="btn-konfirmasi">Konfirmasi</button>
+  
+  <p id="statusReservasiMsg" class="status-msg"></p>
+</form>
+
+<div id="reservasiThanks" class="thanks-message" style="display:none;">
+  <img src="https://undangan-bdg.vercel.app/Asset/thank-you.png" alt="Terima kasih" class="thank-you-img floating-animate">
+  
+  <p class="thanks-wording">
+    🎉 Terima kasih, konfirmasi kehadiran Anda telah tercatat.
+  </p>
+</div>
+
+<div class="decor-divider"></div>
+
+<div id="notificationBell" class="notification-bell" style="position: fixed; top: 20px; right: 20px; cursor: pointer; display: none; z-index: 999;">
+  <img src="https://undangan-bdg.vercel.app/Asset/notification.png" alt="Notifikasi" style="width: 32px; height: 32px;">
+</div>
+
+<div id="ucapanLoading" class="shimmer-wrapper" style="display: none;">
+  <div class="shimmer-card"></div>
+  <div class="shimmer-card"></div>
+  <div class="shimmer-card"></div>
+</div>
+
+
+
+
+<section id="doa-section">
+  <div class="doa-heading-wrapper">
+  <h2>Ucapan & <span class="doa-title-sub">Doa</span></h2>
+
+  <!-- ✨ Icon Info di Kanan Atas -->
+  <div class="info-icon-wrapper-doa" onclick="openBottomSheetGeneric('bottomSheetDoa')" title="Klik untuk info lebih lanjut!">
+    <img src="https://undangan-bdg.vercel.app/Asset/information.png" alt="Info" class="info-icon-doa" />
+    <div class="tooltip-text-doa">
+      📢 Klik aku untuk informasi lebih lengkap!
+    </div>
+  </div>
+</div>
+
+  <form id="formUcapan" onsubmit="submitUcapan(event)" class="form-doa">
+    <input type="text" name="nama" id="nama" placeholder="Tulis namamu di sini..." class="input-nama" required>
+    <textarea name="ucapan" placeholder="Tulis ucapan dan doa untuk Devi & Sandro..." class="input-ucapan" required></textarea>
+    <button type="submit" class="btn-kirim">Kirim Ucapan</button>
+    <p id="ucapanStatusMsg" class="status-msg"></p>
+  </form>
+
+  <div id="ucapanThanks" class="thanks-message" style="display: none;">
+    <img src="https://undangan-bdg.vercel.app/Asset/thank-you.png" alt="Terima kasih" class="floating-animate">
+    <p class="thanks-wording">🎉 Terima kasih atas ucapan dan doanya!</p>
+  </div>
+
+  <div id="userIdValue" class="user-frame"></div>
+
+  <div class="filter-wrapper">
+  <input type="checkbox" id="filterByUser" />
+  <label id="filterByUserLabel" for="filterByUser">Sorot ucapan saya</label>
+</div>
+
+  <div id="daftarUcapan"></div>
+
+  <div id="noUcapanMsg" class="no-ucapan-message" style="display: none;">
+    <p>💬 Belum ada ucapan yang masuk.</p>
+  </div>
+
+  <div id="pageInfo"></div>
+  <div id="pagination"></div>
+</section>
+
+
+  
+
+
+
+
+
+<!-- === BottomSheet Info Scratch & Win === -->
+<div id="bottomSheetDoa" class="bottom-sheet hidden">
+  <div class="bottom-sheet-overlay" onclick="closeBottomSheetGeneric('bottomSheetDoa')"></div>
+  <div class="bottom-sheet-content">
+    <button class="close-button" onclick="closeBottomSheetGeneric('bottomSheetDoa')">×</button>
+    <h3>🎁 Scratch & Win Souvenir Spesial!</h3>
+    <p style="text-align: left;">
+      Terima kasih telah mengirimkan konfirmasi kehadiran! 🙏<br><br>
+
+      Kini, Anda mendapatkan kesempatan untuk bermain <strong>Scratch & Win</strong>:
+      <ul style="text-align: left; margin-top: 8px;">
+        <li>1. Klik dan gesek Scratch Card yang akan muncul.</li>
+        <li>2. Jika beruntung, Anda akan mendapatkan souvenir spesial dari pengantin! 🎉</li>
+        <li>3. Kesempatan ini hanya diberikan untuk tamu yang telah mengisi kehadiran dan memberikan ucapan.</li>
+      </ul>
+      Selamat mencoba dan semoga beruntung! 🍀
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<section id="penutupSection" class="penutup-section scroll-reveal">
+  <div class="penutup-overlay"></div> <!-- ✅ Tambahan Background soft -->
+
+  <p class="penutup-salam animate-slide-up">
+    Wassalamu’alaikum warahmatullahi wabarakatuh
+  </p>
+
+  <div id="pantunContainer" class="pantun-container animate-words"></div>
+
+  <p class="penutup-invite fade-in-text">
+    💌 Dengan penuh sukacita, kami mengundang Bapak/Ibu/Saudara/i untuk menjadi saksi perjalanan kami.<br>
+    Terima kasih atas kehangatan dan doa restunya. 🌸
+  </p>
+</section>
+
+
+<audio id="bgm" loop style="display: none;">
+  <source src="/Asset/music-bg.mp3" type="audio/mp3">
+</audio>
+
+
+
+<div id="modalBalas" style="display:none; position:fixed; top:0; left:0; 
+  width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
+  <div style="background:white; padding:2em; border-radius:10px; max-width:400px; width:90%;">
+    <h3>Balas ke Admin</h3>
+    <textarea id="inputBalasanAdmin" placeholder="Tulis balasanmu..." style="width:100%; padding:1em;"></textarea>
+    <button onclick="kirimBalasanAdmin()">Kirim</button>
+    <button onclick="tutupModalBalas()" style="margin-left:1em;">Batal</button>
+    <input type="hidden" id="balasIdTarget">
+  </div>
+</div>
+
+<!-- === BottomSheet Info Souvenir === -->
+<div id="bottomSheet" class="bottom-sheet hidden">
+  <div class="bottom-sheet-overlay" onclick="closeBottomSheetGeneric('bottomSheet')"></div>
+
+  <div class="bottom-sheet-content animate-pop">
+    <button class="close-button" onclick="closeBottomSheetGeneric('bottomSheet')">×</button>
+
+    <h3 class="bottom-title">🎁 Your Chance to Win an Exclusive Souvenir!</h3>
+
+    <p style="text-align: center; margin-top: 1em;">
+      Dengan memilih <strong>Datang</strong> dalam RSVP,
+      Anda berhak mengikuti <strong>Scratch & Win Experience</strong> yang kami sediakan untuk tamu spesial.<br><br>
+      🎉 Hadiah berupa <strong>souvenir eksklusif</strong> telah kami siapkan untuk <strong>10 tamu beruntung</strong>.<br><br>
+      Terima kasih telah menjadi bagian dari momen istimewa kami. Kehadiran Anda sungguh berarti. 💖
+    </p>
+  </div>
+</div>
+
+<!-- === BottomSheet Scratch & Win === -->
+<div id="bottomSheetScratch" class="bottom-sheet hidden">
+  <div class="bottom-sheet-overlay" onclick="closeBottomSheetGeneric('bottomSheetScratch')"></div>
+
+  <div class="bottom-sheet-content">
+    <button class="close-button" onclick="closeBottomSheetGeneric('bottomSheetScratch')">×</button>
+
+    <!-- Scratch Card Content -->
+    <div class="scratch-card-wrapper">
+      <img id="scratchRewardImage" src="" alt="Reward" class="reward-image">
+      <canvas id="scratchCanvas"></canvas>
+
+      <!-- Progress Bar + Text -->
+      <div id="progressContainer" style="width: 100%; height: 5px; background: #eee; margin-top: 10px; display: none;">
+        <div id="progressBar" style="height: 100%; width: 0; background: #4caf50;"></div>
+      </div>
+
+      <div id="progressText" style="margin-top: 10px; font-size: 14px; color: #777; text-align: center; display: none;">
+        Keep scratching...
+      </div>
+    </div>
+
+    <p id="scratchResultText" class="scratch-result-text"></p>
+    </div>
+</div>
+
+<audio id="winSound" src="https://undangan-bdg.vercel.app/Asset/win-sound.mp3"></audio>
+<audio id="loseSound" src="https://undangan-bdg.vercel.app/Asset/lose-sound.mp3"></audio>
+
+
+</body>
+
+</html>
